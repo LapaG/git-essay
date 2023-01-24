@@ -1,0 +1,4 @@
+= Moja dokumentacja o git'cie
+
+W tym projekcie zebrałam informacje na temat tego, czym jest git, jakie są
+zalety korzystania z niego oraz jak używać gita.

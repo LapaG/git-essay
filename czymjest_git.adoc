@@ -33,12 +33,10 @@ $ git init
 komenda ta tworzy nowy podfolder .git z
 plikami repozytorium.
 
-Żeby rozpocząć kontrolę wersji plików w folderze należy zastosować komendy:
-
-$ git add [nazwa pliku] <- za pomocą tej komendy dodać możemy pliki,
-    które chcemy aby podlegały kontroli wersji.
-
-$ git commit -m 'Opis zmian w tej wersji pliku'
+// Żeby rozpocząć kontrolę wersji plików w folderze należy zastosować komendy:
+// $ git add `nazwa pliku` <- za pomocą tej komendy dodać możemy pliki,
+//    które chcemy aby podlegały kontroli wersji.
+// $ git commit -m 'Opis zmian w tej wersji pliku'
 
 == Dodawanie zmian do repozytorium
 
@@ -50,7 +48,7 @@ $ git status
 Aby zaczać 'śledzić' (ang. tracking) nowy plik czy wybrać modyfikowane
 pliki do komisji:
 
-$ git add nazwa_pliku
+$ git add `nazwa_pliku`
 
 Jeśli sprawdzimy status po dodaniu pliku będzie on zapisany pod
 'changes to be commited:', czyli znajdować się on będzie w
@@ -62,4 +60,47 @@ $ git commit
 
 Następnie należy dodać opis dokonanych zmian.
 
-# Git clone i dodawanie gałęzi.
+$ git push
+
+prowadzi do opublikowania zmian.
+
+== Branching
+
+Git pozwala na stworzenie gałęzi projektu w prosty sposób, za pomocą komendy:
+
+$ git branch `nazwa_gałęzi`
+
+Powstała gałąź nie jest tą, na którą się aktualnie znajdziesz. Aby przejść
+między gałęziami należy napisać:
+
+$ git checkout `nazwa_gałęzi`
+
+Można teraz dokonać zmian na każdej gałęzi niezależnie przechodząc między
+nimi.
+
+//Aby sprawdzić historię zmian całego projektu można zastosować:
+
+//$ git log --oneline --decorate --graph --all
+
+Kiedy nadejdzie czas, aby połączyć ze sobą dwie gałęzie, gdy na przykład
+zakończymy pracę nad dodaną gałęzią, możemy je połączyć:
+
+$ git merge `nazwa_dołączanej_gałęzi` - gałąź, którą łączymy z główną
+
+Możemy potem usunąć dodatkową gałąź:
+
+$ git branch -d `nazwa_usuwanej_galezi`
+
+== Klonowanie
+
+Komenda
+
+$ git clone `klonowane_repozytorium`,
+    
+służy do kopiowania repozytorium do nowego folderu.
+Kopiowane repozytorium może mieć formę
+'https://github.com/użytkownik/projekt'.
+
+
+
+// Git clone i dodawanie gałęzi.

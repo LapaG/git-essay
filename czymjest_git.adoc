@@ -37,7 +37,7 @@ plikami repozytorium.
 Jeśli zamiast tworzyć od początku nowe repozytorium chcemy skorzystać
 z istniejącego już, możemy skorzystać z komendy:
 
-$ git clone klonowane_repozytorium,
+$ git clone `klonowane_repozytorium`,
 
 która służy do kopiowania repozytorium do nowego folderu.
 Kopiowane repozytorium może mieć formę
@@ -111,8 +111,6 @@ $ git merge `nazwa_dołączanej_gałęzi` - gałąź, którą łączymy z głów
 Możemy potem usunąć dodatkową gałąź:
 
 $ git branch -d `nazwa_usuwanej_galezi`
-
-== Klonowanie
 
 
 // Git clone i dodawanie gałęzi.

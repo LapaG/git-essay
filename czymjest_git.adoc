@@ -33,6 +33,17 @@ $ git init
 komenda ta tworzy nowy podfolder .git z
 plikami repozytorium.
 
+
+Jeśli zamiast tworzyć od początku nowe repozytorium chcemy skorzystać
+z istniejącego już, możemy skorzystać z komendy:
+
+$ git clone klonowane_repozytorium,
+
+która służy do kopiowania repozytorium do nowego folderu.
+Kopiowane repozytorium może mieć formę
+'https://github.com/użytkownik/projekt'.
+
+
 // Żeby rozpocząć kontrolę wersji plików w folderze należy zastosować komendy:
 // $ git add `nazwa pliku` <- za pomocą tej komendy dodać możemy pliki,
 //    które chcemy aby podlegały kontroli wersji.
@@ -78,6 +89,16 @@ $ git checkout `nazwa_gałęzi`
 Można teraz dokonać zmian na każdej gałęzi niezależnie przechodząc między
 nimi.
 
+
+
+Natomiast zastosowanie komendy:
+
+$ git checkout -b nazwa_gałęzi,
+
+doprowadzi do utworzenia nowej gałęzi i przeniesienia się
+automatycznie na tę nowo-utworzoną gałąź.
+
+
 //Aby sprawdzić historię zmian całego projektu można zastosować:
 
 //$ git log --oneline --decorate --graph --all
@@ -92,15 +113,6 @@ Możemy potem usunąć dodatkową gałąź:
 $ git branch -d `nazwa_usuwanej_galezi`
 
 == Klonowanie
-
-Komenda
-
-$ git clone `klonowane_repozytorium`,
-    
-służy do kopiowania repozytorium do nowego folderu.
-Kopiowane repozytorium może mieć formę
-'https://github.com/użytkownik/projekt'.
-
 
 
 // Git clone i dodawanie gałęzi.

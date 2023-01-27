@@ -1,0 +1,65 @@
+= Czym jest git?
+
+== Wstęp
+
+Git to zdecentralizowany system kontoli wersji. Oznacza to, że historia zmian
+projektu jest przechowywana u poszczególnych użytkowników. Repozytoria
+mogą być odzyskane dzięki kopiom użytkowników, jeśli doszłoby do uszkodzenia
+serwera.
+Git jest pod wieloma względami szybszy i nie wymaga ciągłego dostępu do
+internetu, jako, że wiele operacji jest lokalnych.
+
+Jedną z właściwości Gita, jest to, że kolejne wersje projektu są przechowywane
+w pamieci jako kolejne pliki, a nie historia dokonanych zmian.
+
+== Przesyłanie danych
+
+Podczas wysyłania nowej wersji w Gicie pliki znajdować się moga w trzech
+stanach:
+
+* modified - plik został zmieniony, ale nie 'komitowany'
+* staged - modyfikowany plik został oznaczony do kolejnej 'komisji'
+* commited - plik został dodany do lokalnej bazy danych
+
+== Jak tworzyć repozytorium
+Jeśli masz folder projektu, który jeszcze nie jest objęty kontrolą wersji
+i chcesz zacząć kontolować go z pomocą Gita, należy otworzyć terminal i
+wejść do tego folderu.
+
+Tam napisać komendę:
+
+$ git init
+
+komenda ta tworzy nowy podfolder .git z
+plikami repozytorium.
+
+Żeby rozpocząć kontrolę wersji plików w folderze należy zastosować komendy:
+
+$ git add [nazwa pliku] <- za pomocą tej komendy dodać możemy pliki,
+    które chcemy aby podlegały kontroli wersji.
+
+$ git commit -m 'Opis zmian w tej wersji pliku'
+
+== Dodawanie zmian do repozytorium
+
+Żeby sprawdzić, czy jakieś pliki zostały zmodyfikowane od ostatniej komisji
+stosuje się komendę:
+
+$ git status
+
+Aby zaczać 'śledzić' (ang. tracking) nowy plik czy wybrać modyfikowane
+pliki do komisji:
+
+$ git add nazwa_pliku
+
+Jeśli sprawdzimy status po dodaniu pliku będzie on zapisany pod
+'changes to be commited:', czyli znajdować się on będzie w
+stanie 'staged'.
+
+Żeby dokonać komisji:
+
+$ git commit
+
+Następnie należy dodać opis dokonanych zmian.
+
+# Git clone i dodawanie gałęzi.
